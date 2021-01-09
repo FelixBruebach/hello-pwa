@@ -17,7 +17,7 @@ selectButton.addEventListener("click", async function () {
 
         const contact = (await navigator.contacts.select(properties, options))[0];
 
-        contactInformation = undefined;
+        contactInformation = "";
         profilePicture = undefined;
 
         contactInformationText.value = "";
