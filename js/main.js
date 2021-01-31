@@ -12,7 +12,7 @@ const shareButton = document.getElementById("share-button");
 
 selectButton.addEventListener("click", async function () {
     if ("contacts" in navigator && "ContactsManager" in window) {
-        const properties = ["name", "email", "tel", "address", "icon"];
+        const properties = ["name", "email", "address", "icon"];
         const options = {multiple: false};
 
         const contact = (await navigator.contacts.select(properties, options))[0];
@@ -24,13 +24,11 @@ selectButton.addEventListener("click", async function () {
         contactImage.src = "";
 
         const name = contact.name[0];
-        const email = contact.email[0];
         const tel = contact.tel[0];
         const address = contact.address[0];
         const icon = contact.icon[0];
 
         if (name) contactInformation += `Name: ${name}\n`;
-        if (email) contactInformation += `E-Mail: ${email}\n`;
         if (tel) contactInformation += `Nummer: ${tel}\n`;
         if (address) contactInformation += `Adresse: ${address}\n`;
         contactInformation += "\n";
