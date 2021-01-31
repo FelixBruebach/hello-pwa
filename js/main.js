@@ -29,7 +29,7 @@ selectButton.addEventListener("click", async function () {
         const icon = contact.icon[0];
 
         if (name) contactInformation += `Name: ${name}\n`;
-        if (tel) contactInformation += `Nummer: ${tel}\n`;
+        if (tel) contactInformation += `Nummer: ${email}\n`;
         if (address) contactInformation += `Adresse: ${address}\n`;
         contactInformation += "\n";
         if (icon) profilePicture = new File([icon], `${name}.jpg`, {type: "image/jpeg"});
