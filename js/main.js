@@ -24,12 +24,12 @@ selectButton.addEventListener("click", async function () {
         contactImage.src = "";
 
         const name = contact.name[0];
-        const tel = contact.tel[0];
+        const email = contact.email[0];
         const address = contact.address[0];
         const icon = contact.icon[0];
 
         if (name) contactInformation += `Name: ${name}\n`;
-        if (tel) contactInformation += `Nummer: ${email}\n`;
+        if (email) contactInformation += `Nummer: ${email}\n`;
         if (address) contactInformation += `Adresse: ${address}\n`;
         contactInformation += "\n";
         if (icon) profilePicture = new File([icon], `${name}.jpg`, {type: "image/jpeg"});
